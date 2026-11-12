@@ -431,10 +431,10 @@ ul.delivered li::before { content: ''; position: absolute; left: 0; top: .62em; 
 .theme-neurock .pg.light .btn { color: #f6ff47; }
 .theme-neurock .pg.dark .btn { color: #101417; }
 .theme-torke {
-  --hf: Sora, sans-serif; --bf: Figtree, sans-serif;
+  --hf: 'Instrument Sans', Figtree, sans-serif; --hw: 600; --bf: Figtree, sans-serif;
   --l-bg: #f7ebec; --l-ink: #161616; --l-muted: #595959; --l-acc: #161616;
   --d-bg: #000; --d-ink: #fff; --d-muted: #a6a6a6; --d-acc: #a9f0d1;
-  --r-card: 12px; --r-btn: 8px;
+  --r-card: 18px; --r-btn: 999px;
 }
 .theme-torke .pg.light .btn { color: #a9f0d1; }
 .theme-autobasket {
