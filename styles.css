@@ -74,13 +74,13 @@ button { font: inherit; color: inherit; cursor: pointer; }
     linear-gradient(var(--wall-hi), var(--wall-lo));
 }
 .entrance-text { max-width: 400px; }
-.entrance h1 { font: 700 clamp(44px, 4.6vw, 72px)/1.02 var(--display); letter-spacing: -.045em; margin-bottom: .45em; }
+.entrance h1 { font: 700 clamp(44px, 3.8vw, 54px)/1.1 var(--display); letter-spacing: -.02em; margin-bottom: .45em; }
 .entrance p { max-width: 54ch; margin: 0; color: var(--text-2); font-size: 17px; }
 .entrance p + p { margin-top: .9em; }
 .entrance p:first-of-type { color: var(--text); }
 
 .shelf {
-  position: relative; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr));
+  position: relative; display: grid; grid-template-columns: repeat(5, minmax(0, 1fr));
   --shelf-gap: clamp(20px, 3vw, 48px); gap: var(--shelf-gap); align-items: start; perspective: 1400px;
   padding-bottom: 8px;
 }
@@ -464,6 +464,18 @@ ul.delivered li::before { content: ''; position: absolute; left: 0; top: .62em; 
 .theme-quanthome .cover-in.left::before { content: ''; position: absolute; left: 0; right: 0; top: 0; height: 10px; background: #000; }
 .theme-quanthome .lp, .theme-quanthome .swatches div { border-radius: 0; }
 
+.theme-revault {
+  --hf: Archivo, 'Red Hat Text', sans-serif; --hw: 800; --bf: 'Red Hat Text', sans-serif;
+  --l-bg: #f3f3f4; --l-ink: #0d1321; --l-muted: #4b5163; --l-acc: #0d1321;
+  --d-bg: #0d1321; --d-ink: #f3f3f4; --d-muted: #c5c9d3; --d-acc: #aa7dce;
+  --r-card: 6px; --r-btn: 4px;
+}
+.theme-revault h3, .theme-revault .big-line, .theme-revault .cover-line { font-stretch: 96%; }
+.theme-revault .pg.light .btn { color: #aa7dce; }
+.theme-revault .pg.dark .btn { color: #0d1321; }
+.theme-revault .pg.light ul.delivered li::before { background: #6f3fa0; }
+.theme-revault .cover-line { color: #aa7dce; }
+
 /* page specials */
 .report-page { padding: 18px !important; display: grid; place-items: center; background: #f5f5f5 !important; }
 .report-page img { max-height: 100%; width: auto; box-shadow: 0 0 0 1px #e1e1e1, 0 10px 24px -12px rgba(0, 0, 0, .3); }
@@ -524,7 +536,7 @@ html:not(.js) .pg { height: auto; min-height: 520px; }
 .cr-neurock .cr-h { max-width: 70%; }
 
 /* feed mockups and wide shots keep a feed-like width, so wider pages do not grow taller */
-.pg .shot { max-width: 440px; }
+.pg .shot { max-width: min(440px, 100%); }
 
 /* ---------- Quanthome: black ground, light grey logo, approved tones only ---------- */
 .theme-quanthome { --l-bg: #f5f5f5; --d-acc: #f5f5f5; --l-acc: #000; }
